@@ -1,0 +1,11 @@
+:root {
+    --bg-color: #ffffff;
+    --main-color: #4b9e22;
+    --text-color: #000000;
+    --other-color: #83868c;
+    --second-color: #d9d9d9;
+
+    --h1-font: 5.5rem;
+    --h2-font: 2.8rem;
+    --p-font: 1.1rem;
+}

@@ -1,0 +1,28 @@
+<header>
+    <a href="" class="logo">
+        <img src="/assets/logo.png" alt="">
+    </a>
+
+    <ul class="navlist">
+        <li><a href="/">Home</a></li>
+        <li><a href="/book">Shop</a></li>
+        <li><a href="/chef">Chef info.</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+    <div class="nav-content">
+        <% if (!member) { %>
+            <a href="/signin"><i class="ri-user-line"></i></a>
+        <% } else { %>
+            <a href="/member/profile"><i class="ri-user-line"></i></a>
+        <% } %>
+        <a href="/book"><i class="ri-heart-2-line"></i></a>
+        <a href="/book"><i class="ri-shopping-bag-line"></i></a>
+        
+        <% if (member) { %>
+            <a href="/logout">Logout</a>
+        <% } %>
+        <div class="bx-x" id="menu-icon"><i class="ri-menu-line"></i></div>
+
+    </div>
+
+</header>

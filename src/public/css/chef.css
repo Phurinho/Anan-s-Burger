@@ -1,3 +1,5 @@
+@import './colors.css';
+
 * {
     margin: 0;
     padding: 0;
@@ -6,18 +8,6 @@
     text-decoration: none;
     scroll-behavior: smooth;
     font-family: "Jost", sans-serif;
-}
-
-:root {
-    --bg-color: #ffffff;
-    --main-color: #4b9e22;
-    --text-color: #000000;
-    --other-color: #83868c;
-    --second-color: #d9d9d9;
-
-    --h1-font: 5.5rem;
-    --h2-font: 2.8rem;
-    --p-font: 1.1rem;
 }
 
 .chef {
@@ -29,7 +19,7 @@
     justify-content: center;
     text-align: center;
     
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../img/chef\ 9fc367df-7005-484a-b158-57eb672adf19.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../assets/chef\ 9fc367df-7005-484a-b158-57eb672adf19.png);
     background-size: cover;
     background-position: center;
 }
@@ -70,7 +60,7 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../img/food.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../assets/food.png);
     background-size: cover;
     background-position: center;
 

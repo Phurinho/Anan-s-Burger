@@ -100,12 +100,12 @@ section {
 .hero {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url(../img/hero.jpg) no-repeat;
+    background: url(../img/hero01.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -117,7 +117,7 @@ section {
 }
 
 .hero-text h1 {
-    font-size: var(--h1-font);
+    font-size: 7rem;
     font-weight: 700;
     color: var(--bg-color);
     margin: 10px 0 20px;
@@ -130,7 +130,7 @@ section {
 }
 
 .center-text h6 {
-    font-size: 26px;
+    font-size: 5rem;
     font-weight: 600;
     color: var(--main-color);
 }
@@ -410,9 +410,9 @@ section {
 
 .footer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-template-columns: repeat(3,1fr);
     align-items: center;
-    gap: 1rem;
+    gap: 7rem;
 }
 
 .footer-box .logo img {

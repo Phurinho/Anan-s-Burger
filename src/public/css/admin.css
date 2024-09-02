@@ -1,0 +1,124 @@
+@import './colors.css';
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+}
+
+.layer{
+    margin-top: 200px;
+    margin-bottom: 150px;
+    display: flex;
+    position: relative;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; 
+    text-align: center;
+}
+.container{
+    padding: 15px;
+    padding: 4% 4% 4% 4%;
+    border-radius: 10px;
+    border-width: 6px;
+    border-style: solid ;
+    max-width: 900px; 
+    width: 100%; 
+    margin: 0 auto; /* Ensure it is centered */
+    overflow: auto; /* Allows for scrolling if the content becomes too large */ 
+}
+.container-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post {
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    border: 2px solid var(--text-color); /* Black border */
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px; /* Width of each post */
+    text-align: left;
+}
+
+.post-title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.post-subtitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.meta {
+    font-size: 14px;
+    color: var(--other-color);
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid var(-set-color);
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 10px;
+    border: 2px solid var(--set-coler);
+    border-left: none;
+    background-color: var(--dead-color);
+    color: var(--bg-color);
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    font-size: 16px;
+}
+
+.search-button:hover {
+    background-color: var(--fat-color);
+}
+
+.post-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 10px;
+    
+}
+
+.edit-button, .delete-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.edit-button {
+    background-color: var(--greens-color); /* Green */
+    color: var(--bg-color);
+}
+
+.delete-button {
+    background-color: var(--reds-color); /* Red */
+    color: var(--bg-color);
+}
+
+.edit-button:hover {
+    background-color: var(--greens-hover-color);
+}
+
+.delete-button:hover {
+    background-color:var(--reds-hover-color);
+}

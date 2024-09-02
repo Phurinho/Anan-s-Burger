@@ -4,6 +4,15 @@
     --text-color: #000000;
     --other-color: #83868c;
     --second-color: #d9d9d9;
+    --set-color:#ccc;
+    --dead-color:#333;
+    --fat-color:#555;
+    --greens-color:#4CAF50;
+    --reds-color:#f44336;
+    --greens-hover-color:#45a049;
+    --reds-hover-color:#d32f2f;
+    
+
 
     --h1-font: 5.5rem;
     --h2-font: 2.8rem;

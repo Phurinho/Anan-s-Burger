@@ -9,7 +9,8 @@ const flash = require('connect-flash');
 const connectDB = require('./config/connectDB');
 const userRouter = require('./routes/user.route');
 const memberRouter = require('./routes/member.route');
-const { checkMember } = require('./middleware/auth');
+const adminRouter = require('./routes/admin.route');
+const { checkMember, checkAdmin } = require('./middleware/auth');
 
 const app = express();
 
@@ -31,9 +32,11 @@ app.use(session({
 
 app.use(flash());
 app.use(checkMember);
+app.use(checkAdmin);
 
-app.use('/member', memberRouter)
 app.use("/", userRouter);
+app.use('/member', memberRouter);
+app.use('/admin', adminRouter);
 
 const port = process.env.PORT;
 

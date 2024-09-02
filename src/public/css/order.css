@@ -1,0 +1,81 @@
+
+.hero{
+    background: url(../assets/lonuge.jpg) no-repeat;
+}
+
+.course1 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)), url(../assets/course1.jpeg);
+    background-size: cover;
+    background-position: center;
+    transition: ease-in-out 0.5s;
+}
+.course2{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)), url(../assets/course2.jpeg);
+    background-size: cover;
+    background-position: center;
+    transition: ease-in-out 0.5s;
+}
+
+.course3{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)), url(../assets/course3.jpeg);
+    background-size: cover;
+    background-position: center;
+    transition: ease-in-out 0.5s;
+}
+
+
+.course-content h2 {
+    font-size: 5rem;
+    font-weight: 600;
+    color: var(--bg-color);
+    margin-bottom: 15px;
+}
+
+.course-content p {
+    font-size: var(--p-font);
+    font-weight: 600;
+    color: var(--bg-color);
+    margin-bottom: 35px;
+}
+
+.course-btn {
+    display: inline-block;
+    padding: 11px 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all .6s ease;
+}
+
+.course-btn:hover {
+    cursor: pointer;
+    background: var(--main-color);
+    color: var(--bg-color);
+    scale:1.2;
+    transition: 1s;
+    
+}

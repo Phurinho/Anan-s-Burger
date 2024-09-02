@@ -26,6 +26,16 @@ exports.registerPage = (req, res) => {
     res.render('user/signup');
 }
 
+exports.orderPage = (req,res) =>{
+    res.render('user/order')
+}
+
+exports.checkoutPage = (req,res) =>{
+    res.render('user/checkout')
+}
+
+
+
 exports.userRegister = async (req, res) => {
     try {
         const { username, email, password, confirmPassword } = req.body;

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phurin's cuisine</title>
+    <!-- box icon link -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@lastest/css/boxicons.min.css">
+
+    <!-- remix icons link -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- link css -->
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/order.css" type="text/css">
+</head>
+
+<body>
+    <!-- header -->
+    <%- include('./../components/navbar') %>
+<!-- hero -->
+<section class="hero">
+    
+    <div class="hero-container">
+       <div class="hero-text">
+        <h1>BOOK NOW</h1>
+       </div>
+        
+    </div>
+
+</section>
+
+<!-- store -->
+<section class="store">
+    <div class="center-text">
+        <h6>Let’s us serve you for tonight.</h6>   
+    </div>
+</section>
+
+
+<!-- course -->
+<section class="course1">
+    <div class="course-content">
+        <h2>Aurum $199</h2>
+        <p>Enjoy a friendly 5 menu course.</p>
+        <a href="/checkout" class="course-btn">BOOK NOW</a>
+    </div>
+</section>
+
+<!-- course -->
+<section class="course2">
+    <div class="course-content">
+        <h2>Smaragdus $299</h2>
+        <p>Dinner night with 7 quality course.</p>
+        <a href="/checkout" class="course-btn">BOOK NOW</a>
+    </div>
+</section>
+
+<!-- course -->
+<section class="course3">
+    <div class="course-content">
+        <h2>Iaspis $199</h2>
+        <p>9 special course, we carefully craft for you.</p>
+        <a href="/checkout" class="course-btn">BOOK NOW</a>
+    </div>
+</section>
+
+
+<%- include('./../components/footer') %>
+</body>
+
+</html>

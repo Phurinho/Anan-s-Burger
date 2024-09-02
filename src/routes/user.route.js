@@ -9,7 +9,11 @@ router.get('/book', userController.bookPage);
 
 router.get('/chef', userController.chefInfoPage);
 
-router.get('/contact', userController.contactPage)
+router.get('/contact', userController.contactPage);
+
+router.get('/order',userController.orderPage);
+
+router.get('/checkout',userController.checkoutPage)
 
 router.get('/signin', userController.loginPage);
 

@@ -2,14 +2,20 @@ const express = require('express');
 
 const router = express.Router();
 const adminController = require('./../controllers/admin.controller');
-const { validateAdminToken } = require('../middleware/auth');
+const { validateToken } = require('../middleware/auth');
 
 router.get('/signin', adminController.loginPage);
 
 router.post('/signin', adminController.adminLoign);
 
-router.get('/logout', adminController.adminSignOut);
+router.get('/logout', validateToken, adminController.adminSignOut);
 
-router.get('/', validateAdminToken, adminController.homePage);
+router.get('/', validateToken, adminController.homePage);
+
+router.get('/edit/:id', validateToken, adminController.editPage);
+
+router.put('/:id', validateToken, adminController.adminEditOrder);
+
+router.delete('/:id', validateToken, adminController.adminDelOrder);
 
 module.exports = router;

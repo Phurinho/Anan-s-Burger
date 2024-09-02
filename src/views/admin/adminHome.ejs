@@ -42,39 +42,22 @@
 
             <!-- Post -->
             <div class="container-post">
-                <div class="post">
-                    <h2 class="post-title">BATMAN</h2>
-                    <h3 class="post-subtitle">Batman-Arkramknight</h3>
-                    <p class="meta">
-                        Posted by <a href="#">Lnwter</a> on Wed Aug 28 2024
-                    </p>
-                    <div class="post-actions">
-                        <button class="edit-button"><i class="ri-edit-line"></i> Edit</button>
-                        <button class="delete-button"><i class="ri-delete-bin-line"></i> Delete</button>
+                <% orders.forEach(order => { %>
+                    <div class="post">
+                        <h2 class="post-title"><%= order.menu %></h2>
+                        <h3 class="post-subtitle"><%= order.description %></h3>
+                        <p class="meta">
+                            Posted by <a href="#"><%= order.username %></a> on <%= order.createdAt.toLocaleDateString() %>
+                        </p>
+                        <p>Tel. <%= order.tel %></p>
+                        <div class="post-actions">
+                            <a href="admin/edit/<%= order.id %>" class="edit-button"><i class="ri-edit-line"></i> Edit</a>
+                            <form action="/admin/<%= order.id %>?_method=DELETE" method="post">
+                                <button class="delete-button"><i class="ri-delete-bin-line"></i> Delete</button>
+                            </form>
+                        </div>
                     </div>
-                </div>
-                <div class="post">
-                    <h2 class="post-title">2213</h2>
-                    <h3 class="post-subtitle">123</h3>
-                    <p class="meta">
-                        Posted by <a href="#">phurin01</a> on Wed Aug 28 2024
-                    </p>
-                    <div class="post-actions">
-                        <button class="edit-button"><i class="ri-edit-line"></i> Edit</button>
-                        <button class="delete-button"><i class="ri-delete-bin-line"></i> Delete</button>
-                    </div>
-                </div>
-                <div class="post">
-                    <h2 class="post-title">pond</h2>
-                    <h3 class="post-subtitle">pond</h3>
-                    <p class="meta">
-                        Posted by <a href="#">phurin01</a> on Wed Aug 28 2024
-                    </p>
-                    <div class="post-actions">
-                        <button class="edit-button"><i class="ri-edit-line"></i> Edit</button>
-                        <button class="delete-button"><i class="ri-delete-bin-line"></i> Delete</button>
-                    </div>
-                </div>
+                <% }); %>
             </div>
         </div>
     </section>

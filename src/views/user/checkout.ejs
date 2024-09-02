@@ -29,46 +29,10 @@
 <body>
     
     <div class="wrapper">
-        <form action="">
+        <h1>BOOKING NOW</h1>
+        <form action="/" method="post">
 
-            <h1>BOOKING NOW</h1>
-
-            <div class="input-box">
-                <input type="text" placeholder="Username" required>
-                <i class='bx bxs-user'></i>
-            </div>
-
-            <div class="input-box">
-                <input type="email" placeholder="Email" required>
-                <i class='bx bxs-envelope'></i>
-            </div>
-
-            <div class="input-box">
-                <input type="tel" placeholder="Phone Number" required>
-                <i class='bx bxs-phone'></i>
-            </div>
-
-
-            <div class="input-box">
-                <select required>
-                    <option value="" disabled selected>Select Option</option>
-                    <option value="one">Aurum</option>
-                    <option value="two">Smaragdus</option>
-                    <option value="three">Iaspis</option>
-                </select>
-                <i class='bx bxs-down-arrow'></i>
-            </div>
-
-            <div class="input-box">
-                <textarea placeholder="Description" rows="4"></textarea>
-                <i class='bx bxs-message-square-detail'></i>
-            </div>
-            
-            <button type="submit" class="btn">Submit</button>
-
-            <div class="container-btn">
-                <a href="/">Back</a>
-            </div>
+            <%- include('./../components/form_field') %>
 
         </form>
     </div>

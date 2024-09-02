@@ -5,12 +5,12 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const flash = require('connect-flash');
+const methodOverride = require('method-override');
 
 const connectDB = require('./config/connectDB');
 const userRouter = require('./routes/user.route');
-const memberRouter = require('./routes/member.route');
 const adminRouter = require('./routes/admin.route');
-const { checkMember, checkAdmin } = require('./middleware/auth');
+const { checkAdmin } = require('./middleware/auth');
 
 const app = express();
 
@@ -19,6 +19,7 @@ connectDB(process.env.MONGODB_CONNECT_URI);
 app.set('view engine', 'ejs');
 app.set('views', (path.join(__dirname, 'views')));
 
+app.use(methodOverride('_method'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -31,11 +32,9 @@ app.use(session({
 }));
 
 app.use(flash());
-app.use(checkMember);
 app.use(checkAdmin);
 
 app.use("/", userRouter);
-app.use('/member', memberRouter);
 app.use('/admin', adminRouter);
 
 const port = process.env.PORT;

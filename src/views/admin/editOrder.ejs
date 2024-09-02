@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,12 +22,20 @@
 
     <!-- link css -->
     <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/checkout.css" type="text/css">
 </head>
-<body>
-    <!-- header -->
-    <%- include('./../components/navbar') %>
 
+
+<body>
     
-    
+    <div class="wrapper">
+        <h1>Edit</h1>
+        <form action="/admin/<%= order.id %>?_method=PUT" method="post">
+
+            <%- include('./../components/form_field') %>
+
+        </form>
+    </div>
+
 </body>
 </html>

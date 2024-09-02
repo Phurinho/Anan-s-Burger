@@ -1,12 +1,19 @@
 const Admin = require('./../models/admin.model');
+const Order = require('./../models/order.model');
 const jwt = require('jsonwebtoken');
 
-exports.homePage = (req, res) => {
-    res.render('admin/adminHome')
+exports.homePage = async (req, res) => {
+    const order = await Order.find().sort({ createdAt: 'desc' });
+    res.render('admin/adminHome', { orders: order });
 }
 
 exports.loginPage = (req, res) => {
     res.render('admin/signin');
+}
+
+exports.editPage = async (req, res) => {
+    const order = await Order.findById(req.params.id);
+    res.render('admin/editOrder', { order: order });
 }
 
 exports.adminLoign = async (req, res) => {
@@ -17,7 +24,7 @@ exports.adminLoign = async (req, res) => {
 
         if (admin) {
             const token = jwt.sign({ id: admin._id, email: admin.email }, process.env.JWT_SECRET, { expiresIn: "1d" });
-            res.cookie("token2", token);
+            res.cookie("token", token);
 
             console.log("Login is successfully!");
             res.redirect('/admin');
@@ -36,7 +43,32 @@ exports.adminLoign = async (req, res) => {
 }
 
 exports.adminSignOut = (req, res) => {
-    res.cookie("token2", "", { maxAge: 1, path: '/' });  
+    res.cookie("token", "", { maxAge: 1, path: '/' });  
     console.log("Logout.");
     res.redirect("/");
 };
+
+exports.adminEditOrder = async (req, res) => {
+    try {  
+        const { username, email, tel, menu, description, createdAt } = req.body;
+        await Order.findByIdAndUpdate(req.params.id, {
+            username: username,
+            email: email,
+            tel: tel,
+            menu: menu,
+            description: description,
+            createdAt: createdAt,
+        });
+
+        console.log('Edit order successfully');
+        res.redirect('/admin');
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+exports.adminDelOrder = async (req, res) => {
+    await Order.findByIdAndDelete(req.params.id);
+    console.log("Delete order successfully!");
+    res.redirect('/admin');
+}

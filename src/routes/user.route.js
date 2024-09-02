@@ -13,16 +13,8 @@ router.get('/contact', userController.contactPage);
 
 router.get('/order',userController.orderPage);
 
-router.get('/checkout',userController.checkoutPage)
+router.get('/checkout',userController.checkoutPage);
 
-router.get('/signin', userController.loginPage);
-
-router.get('/signup', userController.registerPage);
-
-router.post('/signup', userController.userRegister);
-
-router.post('/signin', userController.userLogin);
-
-router.get('/logout', userController.useSignOut);
+router.post('/', userController.userCheckout);
 
 module.exports = router;

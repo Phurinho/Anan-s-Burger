@@ -10,16 +10,16 @@
         <li><a href="/contact">Contact</a></li>
     </ul>
     <div class="nav-content">
-        <% if (!member) { %>
-            <a href="/signin"><i class="ri-user-line"></i></a>
+        <% if (!admin) { %>
+            <a href="/admin/signin"><i class="ri-user-line"></i></a>
         <% } else { %>
-            <a href="/member/profile"><i class="ri-user-line"></i></a>
+            <a href="/admin"><i class="ri-user-line"></i></a>
         <% } %>
         <a href="/order"><i class="ri-heart-2-line"></i></a>
         <a href="/checkout"><i class="ri-shopping-bag-line"></i></a>
         
-        <% if (member) { %>
-            <a href="/logout">Logout</a>
+        <% if (admin) { %>
+            <a href="/admin/logout">Logout</a>
         <% } %>
         <div class="bx-x" id="menu-icon"><i class="ri-menu-line"></i></div>
 

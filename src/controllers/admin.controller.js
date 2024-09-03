@@ -72,3 +72,25 @@ exports.adminDelOrder = async (req, res) => {
     console.log("Delete order successfully!");
     res.redirect('/admin');
 }
+
+exports.adminSearch = async (req, res) => {
+    try {
+        const { username } = req.body;
+        const orderAll = await Order.find().sort({ createdAt: 'desc' });
+        if (!username) {
+            res.render('admin/adminHome', { orders: orderAll });
+        }
+
+        const order = await Order.find({ username: username });
+
+        if (!order) {
+            return res.status(404).send('Order not found');
+        }
+
+        console.log(order);
+        res.render('admin/adminHome', { orders: order });
+    } catch (error) {
+        console.error('Error occurred while searching for order:', error);
+        res.status(500).send('Internal Server Error');
+    }
+};

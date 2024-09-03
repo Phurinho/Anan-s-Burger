@@ -18,4 +18,6 @@ router.put('/:id', validateToken, adminController.adminEditOrder);
 
 router.delete('/:id', validateToken, adminController.adminDelOrder);
 
+router.post('/', validateToken, adminController.adminSearch);
+
 module.exports = router;

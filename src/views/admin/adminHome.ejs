@@ -35,8 +35,8 @@
     <section class="layer">
         <div class="container">
              <!-- Search Bar -->
-            <form class="search-form" action="/search" method="GET">
-                <input type="text" name="query" class="search-input" placeholder="Search posts...">
+            <form class="search-form" action="/admin" method="post">
+                <input type="text" name="username" id="username" class="search-input" placeholder="Search posts...">
                 <button type="submit" class="search-button"> <i class="ri-search-line"></i> Search</button>
             </form>
 
@@ -47,7 +47,7 @@
                         <h2 class="post-title"><%= order.menu %></h2>
                         <h3 class="post-subtitle"><%= order.description %></h3>
                         <p class="meta">
-                            Posted by <a href="#"><%= order.username %></a> on <%= order.createdAt.toLocaleDateString() %>
+                            Order by <a href="#"><%= order.username %></a> on <%= order.createdAt.toLocaleTimeString('en-US') %>
                         </p>
                         <p>Tel. <%= order.tel %></p>
                         <div class="post-actions">

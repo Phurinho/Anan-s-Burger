@@ -122,3 +122,82 @@
 .delete-button:hover {
     background-color:var(--reds-hover-color);
 }
+
+/* Responsive styles for screens with a max width of 768px */
+@media only screen and (max-width: 768px) {
+    .layer {
+        margin-top: 150px;
+        margin-bottom: 100px;
+    }
+
+    .container {
+        padding: 5%;
+        max-width: 600px;
+    }
+
+    .post {
+        max-width: 100%;
+    }
+
+    .post-title {
+        font-size: 20px;
+    }
+
+    .post-subtitle {
+        font-size: 16px;
+    }
+
+    .search-input {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .search-button {
+        font-size: 14px;
+    }
+
+    .edit-button, .delete-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+/* Responsive styles for screens with a max width of 480px */
+@media only screen and (max-width: 480px) {
+    .layer {
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    .container {
+        padding: 5%;
+        max-width: 100%;
+    }
+
+    .post {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .post-title {
+        font-size: 18px;
+    }
+
+    .post-subtitle {
+        font-size: 14px;
+    }
+
+    .search-input {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .search-button {
+        font-size: 14px;
+    }
+
+    .edit-button, .delete-button {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+}
